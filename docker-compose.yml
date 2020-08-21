@@ -1,0 +1,18 @@
+version: "3.4"
+
+# TODO: invest some time in this file...
+
+services:
+  service_name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+      - 10001:10001
+    # environment:
+    #   - DEBUGGER=True
+    volumes:
+      - .:/app:cached
+    # set to host in the dev env only!
+    network_mode: host

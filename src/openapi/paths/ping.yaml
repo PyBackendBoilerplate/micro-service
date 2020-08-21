@@ -1,0 +1,17 @@
+get:
+  summary: TBD
+  description: TBD.
+  x-openapi-router-controller: api.sdk.common.ping
+  operationId: ping
+  responses:
+    "200":
+      description: Ping test
+      content:
+        text/plain:
+          schema:
+            type: string
+            example: "pong"
+    "201":
+      $ref: "../openapi.yaml#/components/responses/NullResponse"
+    "default":
+      $ref: "../openapi.yaml#/components/responses/UnexpectedError"

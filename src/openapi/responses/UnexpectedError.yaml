@@ -1,0 +1,5 @@
+description: Unexpected error has happened
+content:
+  text\plain:
+    schema:
+      type: string

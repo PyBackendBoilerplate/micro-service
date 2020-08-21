@@ -1,0 +1,17 @@
+get:
+    summary: TBD
+    description: TBD.
+    x-openapi-router-controller: api.hello.world.greeting.greeting
+    operationId: greeting
+    responses:
+        "200":
+            description: Greeting.
+            content:
+                text/plain:
+                    schema:
+                        type: string
+                        example: "Greetings! It's Sunday, 12 July, 2020 at 00:22:06"
+        "201":
+            $ref: "../../../openapi.yaml#/components/responses/NullResponse"
+        "default":
+            $ref: "../../../openapi.yaml#/components/responses/UnexpectedError"

@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Kill flask process if debugger was detached before the process was closed",
+            "type": "shell",
+            "command": "lsof -wni tcp:5000 | awk 'NR>1{kill -9 $2}'"
+        }
+    ]
+}

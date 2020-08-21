@@ -1,0 +1,35 @@
+openapi: "3.0.0"
+
+info:
+  title: PyBackendBoilerplate Microservice Boilerplate
+  version: "1.0"
+  description: Multi-file boilerplate for OpenAPI Specification.
+servers:
+  - url: http://localhost:5000/v1.0
+
+paths:
+  /:
+    $ref: "./paths/root.yaml"
+  /ping/:
+    $ref: "./paths/ping.yaml"
+  /hello/world/:
+    $ref: "./paths/hello/world/root.yaml"
+  /hello/world/greeting/:
+    $ref: "./paths/hello/world/greeting.yaml"
+  /hello/world/greeting/{name}:
+    $ref: "./paths/hello/world/personal.yaml"
+
+components:
+  parameters:
+    name:
+      $ref: "./parameters/path/name.yaml"
+
+  schemas:
+    Error:
+      $ref: "./schemas/Error.yaml"
+
+  responses:
+    UnexpectedError:
+      $ref: "./responses/UnexpectedError.yaml"
+    NullResponse:
+      $ref: "./responses/NullResponse.yaml"

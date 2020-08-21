@@ -1,0 +1,4 @@
+FLASK_APP="src.app:app"
+FLASK_ENV=DEVELOPMENT
+
+host=0.0.0.0
