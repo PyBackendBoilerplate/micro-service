@@ -13,6 +13,9 @@ install: ## setup the flask Docker container, install the requirements...
 clean:   ## Clean __pycache__ files
 	py3clean .
 
+rename:  ## Renames the micro-service (see git diff to review the changes afterwards), e.g make rename FROM=service_name TO=new_name
+	./rename_service.sh $(FROM) $(TO)
+
 
 ## Start the Dockerized flask application in local environment
 gunicorn:      ## gunicorn and hot-reload

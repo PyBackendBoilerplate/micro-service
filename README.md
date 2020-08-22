@@ -33,7 +33,9 @@ src -> Root folder for the source code
 ```
 
 This gives you a basic file structure with a working mechanism for running an app in a microservice.
-From here on you need to rename some of the places with your own microservice name and add your own APIs and that's it, everything else is already set.
+From here on you need to rename the microservice and add your own APIs and that's it, everything else is already set.
+
+Oh and by the way, renaming is also automatic using `make rename FROM=service_name TO=new_name` (see `make help` for more info).
 
 Feel free to remove the example [APIs](./src/openapi/openapi.yaml#L10) and change them with your own.
 
@@ -43,7 +45,7 @@ The package uses a [Makefile](./Makefile) for easy CLI but there are also the co
 
 1) So first clone this repository.
 2) Run `git submodule update --init --recursive` inside the repository (to get the sdk's code).
-3) Run `make install` in the root repository directory.
+3) Run `make install` in the root repository directory (or `make rename FROM=service_name TO=new_name` before to rename the microservice).
 4) Try it out using one of the available running options:s
 
     * Run `run_locally.sh` to run locally as a script (with auto-create a .venv and use that) - does not requires `make install` prior to running this way.
