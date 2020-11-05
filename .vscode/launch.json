@@ -56,7 +56,18 @@
                 // Keeps Python from generating .pyc files (__pycache__)
                 "PYTHONDONTWRITEBYTECODE": "1"
             }
-            // "cwd": "${fileDirname}"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                // Keeps Python from generating .pyc files (__pycache__)
+                "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "cwd": "${fileDirname}"
         }
     ]
 }
